@@ -2,7 +2,7 @@ package com.example.lava.Bean;
 
 public class Grade {
     private int task_id;
-    private int student_id;
+    private int course_student_id;
     private int score;
 
     public int getTask_id() {
@@ -13,12 +13,12 @@ public class Grade {
         this.task_id = task_id;
     }
 
-    public int getStudent_id() {
-        return student_id;
+    public int getCourse_student_id() {
+        return course_student_id;
     }
 
-    public void setStudent_id(int student_id) {
-        this.student_id = student_id;
+    public void setCourse_student_id(int course_student_id) {
+        this.course_student_id = course_student_id;
     }
 
     public int getScore() {
