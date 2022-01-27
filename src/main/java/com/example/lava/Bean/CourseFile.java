@@ -1,15 +1,15 @@
 package com.example.lava.Bean;
 
 public class CourseFile {
-    private int course_id;
+    private int courseId;
     private String name;
 
-    public int getCourse_id() {
-        return course_id;
+    public int getCourseId() {
+        return courseId;
     }
 
-    public void setCourse_id(int course_id) {
-        this.course_id = course_id;
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
     }
 
     public String getName() {

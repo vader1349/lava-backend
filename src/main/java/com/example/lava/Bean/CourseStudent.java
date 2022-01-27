@@ -1,31 +1,40 @@
 package com.example.lava.Bean;
 
 public class CourseStudent {
-    int course_id;
-    int student_id;
-    int course_student_id;
+    private int studentId;
+    private int courseId;
+    private int courseStudentId;
+    private int status;
 
-    public int getCourse_id() {
-        return course_id;
+    public int getStudentId() {
+        return studentId;
     }
 
-    public void setCourse_id(int course_id) {
-        this.course_id = course_id;
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
-    public int getStudent_id() {
-        return student_id;
+    public int getCourseId() {
+        return courseId;
     }
 
-    public void setStudent_id(int student_id) {
-        this.student_id = student_id;
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
     }
 
-    public int getCourse_student_id() {
-        return course_student_id;
+    public int getCourseStudentId() {
+        return courseStudentId;
     }
 
-    public void setCourse_student_id(int course_student_id) {
-        this.course_student_id = course_student_id;
+    public void setCourseStudentId(int courseStudentId) {
+        this.courseStudentId = courseStudentId;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

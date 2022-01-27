@@ -1,26 +1,26 @@
 package com.example.lava.Bean;
 
 public class Task {
-    private int task_id;
-    private int course_id;
+    private int taskId;
+    private int courseId;
     private int percentage;
-    private int full_score;
+    private int fullScore;
     private String description;
 
-    public int getTask_id() {
-        return task_id;
+    public int getTaskId() {
+        return taskId;
     }
 
-    public void setTask_id(int task_id) {
-        this.task_id = task_id;
+    public void setTaskId(int taskId) {
+        this.taskId = taskId;
     }
 
-    public int getCourse_id() {
-        return course_id;
+    public int getCourseId() {
+        return courseId;
     }
 
-    public void setCourse_id(int course_id) {
-        this.course_id = course_id;
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
     }
 
     public int getPercentage() {
@@ -31,12 +31,12 @@ public class Task {
         this.percentage = percentage;
     }
 
-    public int getFull_score() {
-        return full_score;
+    public int getFullScore() {
+        return fullScore;
     }
 
-    public void setFull_score(int full_score) {
-        this.full_score = full_score;
+    public void setFullScore(int fullScore) {
+        this.fullScore = fullScore;
     }
 
     public String getDescription() {

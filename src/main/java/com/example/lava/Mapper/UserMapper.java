@@ -17,8 +17,8 @@ public interface UserMapper {
     void addAdministrator(@Param("id")int id);
 
     @Insert("insert into instructor values(#{instructor_id},#{department_id},#{position})")
-    void addInstructor(@Param("instructor_id")int instructorId,@Param("department_id")int departmentId,@Param("position")String position);
+    void addInstructor(@Param("instructor_id")int instructorId,@Param("department_id")int departmentId,@Param("position")char position);
 
-    @Insert("insert into student values(#{id},#{program})")
-    void addStudent(@Param("id")int id,@Param("program")String program);
+    @Insert("insert into student values(#{id})")
+    void addStudent(@Param("id")int id);
 }

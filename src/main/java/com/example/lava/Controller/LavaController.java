@@ -1,11 +1,10 @@
 package com.example.lava.Controller;
 
-import com.example.lava.Bean.Administrator;
-import com.example.lava.Bean.Instructor;
-import com.example.lava.Bean.Student;
-import com.example.lava.Bean.User;
+import com.example.lava.Bean.*;
 import com.example.lava.Service.LavaService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class LavaController {
@@ -21,6 +20,16 @@ public class LavaController {
         return lavaService.getUser(id,password);
     }
 
+    @GetMapping(value = "/program")
+    public List<Program> getProgram(){
+        return lavaService.getProgram();
+    }
+
+    @GetMapping(value = "/department")
+    public List<Department> getDepartment(){
+        return lavaService.getDepartment();
+    }
+
     @PostMapping(value = "/administrator")
     public int addAdministrator(@RequestBody Administrator administrator){
         return lavaService.addAdministrator(administrator);
@@ -34,5 +43,10 @@ public class LavaController {
     @PostMapping(value = "/instructor")
     public int addInstructor(@RequestBody Instructor instructor){
         return lavaService.addInstructor(instructor);
+    }
+
+    @PostMapping(value = "/student_program")
+    public void addStudentProgram(@RequestBody StudentProgram studentProgram){
+        lavaService.addStudentProgram(studentProgram);
     }
 }
