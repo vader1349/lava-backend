@@ -20,6 +20,11 @@ public class LavaController {
         return lavaService.getUser(id,password);
     }
 
+    @GetMapping(value = "/instructor/{department_id}")
+    public List<Instructor> getInstructor(@PathVariable("department_id")int id){
+        return lavaService.getInstructor(id);
+    }
+
     @GetMapping(value = "/program")
     public List<Program> getProgram(){
         return lavaService.getProgram();
@@ -48,5 +53,10 @@ public class LavaController {
     @PostMapping(value = "/student_program")
     public void addStudentProgram(@RequestBody StudentProgram studentProgram){
         lavaService.addStudentProgram(studentProgram);
+    }
+
+    @PostMapping(value = "/course")
+    public int addCourse(@RequestBody Course course){
+        return lavaService.addCourse(course);
     }
 }

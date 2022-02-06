@@ -1,13 +1,19 @@
 package com.example.lava.Mapper;
 
+import com.example.lava.Bean.Instructor;
 import com.example.lava.Bean.User;
 import org.apache.ibatis.annotations.*;
+
+import java.util.List;
 
 @Mapper
 public interface UserMapper {
 
     @Select("select * from sys_user where id = #{id}")
     User getUser(@Param("id") int id);
+
+    @Select("select * from instructor i left join sys_user s on i.instructor_id=s.id where department_id = #{id}")
+    List<Instructor> getInstructor(@Param("id")int id);
 
     @Insert("insert into sys_user values(null,#{name},#{password},#{type},#{email})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
@@ -16,8 +22,8 @@ public interface UserMapper {
     @Insert("insert into administrator values(#{id})")
     void addAdministrator(@Param("id")int id);
 
-    @Insert("insert into instructor values(#{instructor_id},#{department_id},#{position})")
-    void addInstructor(@Param("instructor_id")int instructorId,@Param("department_id")int departmentId,@Param("position")char position);
+    @Insert("insert into instructor values(#{instructorId},#{departmentId},#{position})")
+    void addInstructor(@Param("instructorId")int instructorId,@Param("departmentId")int departmentId,@Param("position")char position);
 
     @Insert("insert into student values(#{id})")
     void addStudent(@Param("id")int id);
